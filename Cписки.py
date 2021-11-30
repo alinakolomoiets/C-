@@ -78,3 +78,13 @@ if s1 in[1,2,3] :
 	print("Jätke kodus!")
 else:
 	print("Kanna maski!")
+#Задание 4: Сортировка
+#Требуется создать программу, которая сортирует список чисел по убыванию/возрастанию их абсолютного значения.
+from random import*
+chislo=[]
+N=int(input("N"))#>2
+for i in range(N):
+	chislo.append(randint(1,100))
+print(chislo)
+chislo.sort()
+print(chislo)
