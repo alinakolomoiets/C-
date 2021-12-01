@@ -80,11 +80,32 @@ else:
 	print("Kanna maski!")
 #Задание 4: Сортировка
 #Требуется создать программу, которая сортирует список чисел по убыванию/возрастанию их абсолютного значения.
-from random import*
-chislo=[]
-N=int(input("N"))#>2
-for i in range(N):
-	chislo.append(randint(1,100))
-print(chislo)
-chislo.sort()
-print(chislo)
+#from random import*
+#chislo=chislo_=[]
+#N=randint(2,100)
+#for i in range(N):#считает количество повторений
+#	chislo.append(randint(-100,100))
+#print(chislo)
+#for n in chislo:#перебирает числа из списка пока они не закончатся
+#	chislo_.append(abs(n))#делаем n положительным
+#chislo_.sort()
+#print(chislo_)
+#chislo_.sort(reverse=True)
+#print(chislo_)
+#Задание 5
+s1=['крот', 'белка', 'выхухоль']
+s2=['a', 'aa', 'aaa', 'aaaa', 'aaaaa']
+s3=['qweasdqweas', 'q', 'rteww', 'ewqqqqq']
+ss=[s1,s2,s3]
+N=0
+while N<3:
+	print(ss[N])
+	pikkem=0
+	sN_=[]
+	for s in ss[N]:
+		pikkus=len(s)
+		if pikkus>pikkem:pikkem=pikkus	
+	for s in ss[N]:
+		sN_.append(s.ljust(pikkem,"_"))
+	print(sN_)
+	N+=1
