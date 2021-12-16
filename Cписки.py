@@ -1,111 +1,52 @@
-#Kmd=[]#tühi järjenid(пустой список)
-#Km=10 #esimine päev
-#print("1.päeval pikkus oli",Km)
-#Kmd.append(Km)
-#print(Kmd)
-#for p in range(2,8):
-#	Km*=1.1 #>10%
-#	Kmd.append(round(Km,2))
-#print(Kmd)
-#print(Kmd[2])
-#print(Kmd.index(16.11)+1)
-#Kmd.remove(10) #Если pop то 0
-#print(Kmd,"listis on kokku",Kmd.count(16.11),"elemendid mis võrdub 16.11")
-#print(len(Kmd),"on jäänud listis")
-#Задание 3: Бесполезные числа
-#len, max
-
-
-
-#Задание 2: Перемена мест
-from random import*
-from keyboard import*
-spisok=[]
-N=int(input("N"))#>2
-for i in range(N):
-	spisok.append(randint(1,100))
-print(spisok)
-max_=max(spisok)
-print(max_)
-max_2=max(spisok)/len(spisok)
-print(max_2)
-a=spisok.index(max_)
-spisok.pop(a)
-spisok.insert(a,max_2)
-print(spisok)
-#for s in spisok:
-#	print(s)
-#pervyi=spisok[0]
-#posledni=spisok[N-1]#-1 последний элемент
-#spisok.pop(0)
-#spisok.insert(0,posledni)
-#spisok.remove(posledni)#?
-#spisok.append(pervyi)
-
-#max_number=max(spisok)
-#b=print("chislo",max_number)
-#i=len(spisok)
-#a=b/i
-
-#spisok_c=spisok.copy()
-#spisok_c.reverse()
-#print(spisok_c)
-#len(spisok)%2==0
-
-
-
-
-
-
-
-
-#Задание 1: Почтовый индекс
-Maakonnad=["Tallinn","Narva,Narva-Jõesuu","Kohtla-Järve","Ida-Virumaa,Lääne-Virumaa,Jõgevamaa","Tartu linn","Tartumaa,Põlvamaa,Võrumaa,Valgamaa","Viljandimaa, Järvamaa, Harjumaa, Raplamaa","Pärnumaa","Läänemaa, Hiiumaa, Saaremaa"]
-while 1:
+slovo="play in game"
+slovo_1=list(slovo)
+print(slovo,slovo_1)
+while True:
+	print("1-Razbieniye stroki po razdelitelu")
+	print("2-Sostoit li stroka iz tsifr:")
+	print("3-Sostoit li stroka iz simvolov v niznem registre:")
+	print("4-Sostoit li stroka iz simvolov v verhnem registre: ")
+	print("5-Preobrazovanie stroki k verhnemu registru:")
+	print("6-Preobrazovanie stroki k niznemu registru:")
+	print("7-Perevesti perviy simvol v verhniy registr , a vse ostalniye v nizniy")
+	print("8-Perevesti perviye bukvi kazdogo slova v verhniy registr , a vse ostalniye v nizniy ")
+	print("9-Vernut otsentrovannuyu stroku, po krayam kotoroy stoit simvol * ")	
+	print("10-S.rpartition(sep)")
 	try:
-		Index=int(input("Index"))
-		if len(str(Index))==5:
-			break
-	except ValueError:
-		print("Valesti sisestatud index!")
-i_list=list(str(Index))
-print(Index)
-print(i_list)
-i_list[0]
-s1=int(str(i_list[0]))#1->0,2->1.....
-print(Maakonnad[s1-1])
-if s1 in[1,2,3] :
-	print("Jätke kodus!")
-else:
-	print("Kanna maski!")
-#Задание 4: Сортировка
-#Требуется создать программу, которая сортирует список чисел по убыванию/возрастанию их абсолютного значения.
-#from random import*
-#chislo=chislo_=[]
-#N=randint(2,100)
-#for i in range(N):#считает количество повторений
-#	chislo.append(randint(-100,100))
-#print(chislo)
-#for n in chislo:#перебирает числа из списка пока они не закончатся
-#	chislo_.append(abs(n))#делаем n положительным
-#chislo_.sort()
-#print(chislo_)
-#chislo_.sort(reverse=True)
-#print(chislo_)
-#Задание 5
-s1=['крот', 'белка', 'выхухоль']
-s2=['a', 'aa', 'aaa', 'aaaa', 'aaaaa']
-s3=['qweasdqweas', 'q', 'rteww', 'ewqqqqq']
-ss=[s1,s2,s3]
-N=0
-while N<3:
-	print(ss[N])
-	pikkem=0
-	sN_=[]
-	for s in ss[N]:
-		pikkus=len(s)
-		if pikkus>pikkem:pikkem=pikkus	
-	for s in ss[N]:
-		sN_.append(s.ljust(pikkem,"_"))
-	print(sN_)
-	N+=1
+		a=int(input())
+		if a==1:
+			print(slovo.split())
+			print(slovo)
+			print()
+		elif a==2:
+			if slovo.isdigit():
+				print("Da sostoit")
+			else :
+				print("Ne sostoit")
+		elif a==3:
+			if slovo.islower():
+				print("Sostoit")
+			else:
+				print("Ne sostoit")
+		elif a==4:
+			if slovo.islower():
+				print("Sostoit")
+			else:
+				print("Ne sostoit")
+		elif a==5:
+			print(slovo.upper())
+		elif a==6:
+			print(slovo.lower())
+		elif a==7:
+			print(slovo.capitalize())
+		elif a==8:
+			print(slovo.title())
+		elif a==9:
+			print(slovo.center(14,"*"))
+		elif a==10:
+			print(slovo.partition("in"))
+	except:
+		ValueError
+		print("Ne to chislo ")
+		print()
+	
